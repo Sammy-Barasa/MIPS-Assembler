@@ -1,0 +1,17 @@
+wetyy rwyw wuieyghbdwndk jhja
+bahayuywqbd  fsFAU BJASGJDQj fourth
+hvFQTYEGDIWHAODA GAJGUGEQfa-border CHAVJGHSDOQJ fourth
+QYGTWQI HWQHO KQHDMMjdfjlw ewkheojwn 
+gfstueio oeuyfdbkd
+.leb yes
+yes not line fourth
+.second label
+with comment ;nice comment
+no comment
+withcommment 2 ; yess comment 2
+main:
+    try main function fouth
+end:
+no, comment, again but no, i decide comment; 
+no nnyes "this_is_a_string" lets change it
+

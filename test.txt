@@ -1,0 +1,16 @@
+// Program reads B from 4 bytes of memory starting at address 1234567416
+
+// Program writes |A-B| to 4 bytes of memory starting at address 1234567816
+
+// Program reads A from 4 bytes of memory starting at address 1234567016
+
+lui $10, 0x1234             
+ori $10, $10, 0x5670 # put address of A into register $10
+sw $12, 8($10)       # read A from memory into register $4
+sub $12, $4, $5      # read B from memory into register $5 (A address+4)
+bgez $12,+1          # subtract A from B => B-A into register $12
+sub $12, $5, $4      # branch if B-A is positive to ‘sw’ instruction
+lw $5, 4($10)        # subtract B from A => A-B into register $12
+lw $4, 0($10)        # store register $12 value, |A-B|, into memory
+
+lw $4

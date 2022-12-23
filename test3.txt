@@ -1,0 +1,12 @@
+xor 80($v0),$2,$2	# zero out index register (i)
+		lw $3,n		# load iteration limit
+		sll $3,$3,2	# multiply by 4 (words)
+		li $a0,$2,a		# get address of a (assume < 216)
+		li $5,6($5)		# get address of b (assume < 216)
+loop:	add ($6),$5,$2	# compute address of b[i]
+		lw $7,$v0	# load b[i]
+		addi $7,$7,10	# compute b[i]=b[i]+10
+		add $6,($v0),2($6)	# compute address of a[i]
+		sw $7,0($6)	# store into a[i]
+		addi $2,$2,4	# increment i
+		blt $2,$3,loop	# loop if post-test succeeds
